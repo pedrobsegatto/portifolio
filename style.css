@@ -1,0 +1,717 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Teko:wght@300..700&display=swap');
+:root {
+    --main-color: #73e432
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Red Hat Display', Arial;
+}
+
+body {
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 65%;
+}
+
+
+
+/* HEADER */
+
+
+
+header {
+    margin-top: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s ease;
+    color: rgb(0, 0, 0)
+}
+
+.sobrenome {
+    color: var(--main-color)
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: #000000;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+    padding: 6px 9px;
+    border-radius: 30px;
+}
+
+nav a:hover,
+nav a.active{
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+
+@media(max-width:1000px){
+    nav{
+        display: none;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+    
+
+
+/* HOME */
+
+
+
+.home{
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: white;
+}
+    
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+    
+span{
+    color: var(--main-color);
+}
+    
+.home-content h3{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+    
+.home-content p{
+     font-size: 1.6rem;
+}
+    
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+    
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+    box-shadow: 0 0 50px var(--main-color);
+}
+    
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid var(--main-color);
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: var(--main-color);
+}
+    
+.social-icons a:hover{
+        color: rgb(255, 255, 255);
+        transform: scale(1.3);
+        background-color: var(--main-color);
+        box-shadow: 0  0 25px var(--main-color);
+}
+    
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: white;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: var(--main-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    border: 2px solid var(--main-color);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+    
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: var(--main-color);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 25px var(--main-color);
+}
+    
+.profession{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+    
+.profession span{
+    position: relative;
+}
+    
+@media (max-width: 1100px){
+    .home{
+        gap: 4rem;
+    }
+}
+    
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+    
+    .home-content h1{
+        font-size: 5rem;
+    }
+    
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+
+
+/* EDUCAÇÃO */
+
+
+
+.education {
+    background-color: var(--main-color);
+    border: none; 
+    min-height: 370px;
+    flex-direction: column;
+    width: 100%;
+        
+}
+    
+.education-title {
+    color: white;
+    font-size: 6rem;
+    margin-bottom: 20px;
+}
+    
+.education-title span {
+    color: black;
+    }
+    
+.education-container {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; 
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+    
+.education-block {
+    flex: 1; 
+    border: 3.5px solid rgb(255, 255, 255);
+    padding: 20px 0px;
+    background-color: white;
+    border-radius: 30px; 
+    text-align: center; 
+    box-sizing: border-box;
+    max-height: 180px;
+}
+    
+.education h3, .education h5 {
+    margin: 0;
+    color: var(--main-color);
+}
+    
+.education h3 {
+    font-size: 2em;
+    margin-bottom: 2px;
+}
+    
+.education h5 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+    
+.education p {
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+    
+@media (max-width: 990px) {
+    
+    .education-container {
+        flex-direction: column;
+        width: auto;
+        justify-content: center;
+        height: auto;
+        padding: 1rem 2.5rem 1rem 5rem;
+    }    
+}
+
+
+
+/* CURSOS */
+
+
+
+.cursos{
+    background: white;
+    color: black;
+    padding: 3rem 12rem;
+    height: flex;
+    min-height: 620px;
+    width: 100%;
+}
+
+.cursos-container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2.5rem;
+}
+.cursos .course-title{
+    color: black;
+    font-size: 6rem;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.course-title span{
+    color:var(--main-color);
+}
+.curso-box{
+    background-color:var(--main-color);
+    height:flex;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.curso-box:hover{
+    transform: scale(1.02);
+    background: black;
+    color:var(--main-color);
+}
+.curso-box .curso-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+    align-items: baseline;
+    padding: 3rem 2rem 3rem 2rem;
+}
+.curso-info h4{
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 1.15;
+}
+.curso-info p{
+    font-size: 1.6rem;
+    font-weight: 600;
+    max-height: 100px;
+    line-height: 1.0;
+    margin: auto;
+    margin-top: 5px;
+}
+
+@media (max-width: 1000px) {
+    
+
+    .cursos-container {
+        grid-template-columns: repeat(2,1fr);
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 780px) {
+    .cursos {
+        padding: 2rem 4rem;
+    }
+
+    .cursos-container {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        padding: 3rem 6.5rem;
+    }
+}
+
+
+
+/* ESPERIÊNCIAS */
+
+
+
+.experience {
+    background-color: black;
+    display: flex;
+    flex-direction: column; 
+    min-height: auto;
+    width: 100%;
+}
+
+.experience-title {
+    font-size: 6rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+
+}
+
+.experience-title span{
+    color: white;
+}
+
+.job-container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    position: relative; 
+    width: 100%;
+}
+
+.job-box {
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: black;
+    transition: 0.4s ease-in-out;
+}
+
+.job-box::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 327px; 
+    height: 3px;
+    background-color: var(--main-color);
+    transform: translateY(-50%);
+}
+
+.job-box:last-child::before {
+    display: none;
+}
+
+#job-be8:hover {
+    background-color: white;
+    border: white;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px var(--main-color);
+    cursor: pointer;
+}
+
+#content-be8:hover{
+    color: black;
+}
+
+.job-content {
+    color: var(--main-color);
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: 100%; 
+    width: 95%;
+}
+
+.job-content h1{
+    font-size: 7rem;
+    padding-bottom: 35px;
+}
+
+.job-content h3{
+    font-size: 2.5rem;
+}
+
+.job-content h5{
+    font-size: 2rem;
+}
+
+.job-content p {
+    font-size: 1.5rem;
+    text-align: center; 
+    margin: 0; 
+    padding: 0 20px;
+}
+
+@media (max-width: 800px) {
+    .experience-title{
+        font-size: 5.5rem;
+    }
+
+    .job-container {
+        flex-direction: column;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+        justify-content: center;
+
+    }
+    .job-box::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 100%; /* Linha para baixo da job-box */
+        width: 2px; /* Largura da linha como uma linha vertical */
+        height: 50px; /* Comprimento da linha entre as job-box */
+        background-color: var(--main-color);
+        transform: translateX(-50%); /* Centraliza a linha */
+        z-index: 0;
+    }
+}
+
+
+
+/* ARTES */
+
+
+.arts {
+    background-color: white;
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+}
+
+.art-text{
+    padding: 200px 0px;
+}
+
+.arts .art-title{
+    font-size: 6rem;
+    color: var(--main-color);
+}
+
+.art-title span{
+    color: black;
+}
+.art-text p{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.image-one {
+    width: 470px;
+    height: 600px;
+}
+
+.image-two {
+    width: 330px;
+    height: 500px;
+}
+
+@media (max-width: 1400px) {
+    .image-one{
+        width: 370px;
+        height: 500px;
+        
+    }
+    .image-two{
+        width: 370px;
+        height: 500px;
+        
+    }
+}
+
+@media (max-width: 1250px) {
+    .image-one{
+        width: 330px;
+        height: 400px;
+    }
+
+    .image-two{
+        width: 270px;
+        height: 400px;  
+    }
+
+    .art-text{
+        padding: 100px 0px;
+    }
+}
+
+@media (max-width: 900px) {
+    .arts{
+        flex-direction: column;
+        padding-top: 40px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .art-text {
+        padding: 0rem;
+    }
+
+}
+
+
+/* CONTATOS */
+
+
+.contact {
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 360px;
+    max-height: 500px;
+
+}
+
+.contact-title {
+    color: black;
+    font-size: 6rem;
+    margin-bottom: 40px;
+}
+
+.contact-title span {
+    color: white;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px; 
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.contact-box{
+    height: 110px;
+}
+
+.contact-info {
+    gap: 10px; 
+}
+
+.contact-info a {
+    display: flex;             
+    align-items: center;     
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+    margin: 10px 0;   
+}
+
+.contact-info img {
+    width: 25px;
+    height: auto;
+    margin-right: 10px; 
+    vertical-align: middle;
+}
+
+.contact-info i{
+    margin-right: 10px;
+}
+
+@media (max-width: 990px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 0px; 
+        justify-items: normal;
+        height: auto;
+    }
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    min-height: 50px;
+    width: 100%;
+}
+.footer-content {
+    color: white;
+    width: 100%;
+    text-align: center;
+    line-height: 4;
+}
+
+@media (max-width: 1000px) {
+    .footer {
+        display: none;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+    html {
+        font-size: 55%;
+    }
+    .contact-box{
+        height: 100px;
+    }
+    .job-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .job-box {
+        width: 250px;
+        height: 250px;
+    }
+
+    .job-content h1 {
+        font-size: 5rem;
+    }
+
+    .job-content h3 {
+        font-size: 2rem;
+    }
+
+    .job-content h5 {
+        font-size: 1.6rem;
+    }
+
+    .job-content p {
+        font-size: 1.3rem;
+    }
+}
+
